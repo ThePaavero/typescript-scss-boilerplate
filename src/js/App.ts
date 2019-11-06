@@ -1,6 +1,6 @@
 const App = () => {
 
-  const init = () => {
+  const init = (): void => {
     console.log('App here.')
   }
 
