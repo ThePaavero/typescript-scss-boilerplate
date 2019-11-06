@@ -11,10 +11,9 @@
     "build:assets": "copyfiles -u 1 \"src/**/*.js\" \"src/**/*.css\" \"src/**/*.html\" \"src/**/*.{png,jpg,gif}\" dist",
     "build:scss": "node-sass --source-map true --output-style compact -r src -o dist",
     "build:tsc": "tsc",
-    "xxxxwatch:tsc": "tsc -w",
-    "watch:tsc": "simplifyify src/**/*.ts --outfile dist/bundle.js --minify --debug",
+    "watch:tsc": "simplifyify src/**/*.ts --outfile dist/bundle.js --minify --debug --watch",
     "watch:scss": "onchange \"src/**/*.scss\" -- run-s build:scss",
-    "watch:assets": "onchange \"src/**/*.js\" \"src/**/*.css\" \"src/**/*.html\" \"src/**/*.{png,jpg,gif}\" -- run-s build:assets",
+    "watch:assets": "onchange \"src/**/*.ts\" \"dist/**/*.js\" \"src/**/*.css\" \"src/**/*.html\" \"src/**/*.{png,jpg,gif}\" -- run-s build:assets",
     "watch": "run-p build serve watch:*"
   },
   "devDependencies": {
