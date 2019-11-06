@@ -9,11 +9,11 @@
     "build": "run-s build:*",
     "serve": "browser-sync start -s \"dist\" -f \"dist\"",
     "build:assets": "copyfiles -u 1 \"src/**/*.css\" \"src/**/*.html\" \"src/**/*.{png,jpg,gif}\" dist",
-    "build:scss": "node-sass --source-map true --output-style compact -r src -o dist",
-    "build:tsc": "simplifyify src/**/*.ts --outfile dist/bundle.js --minify",
-    "watch:tsc": "simplifyify src/**/*.ts --outfile dist/bundle.js --debug --watch",
+    "build:scss": "node-sass --output-style compact -r src -o dist",
+    "build:tsc": "simplifyify src/js/main.ts --outfile dist/bundle.js --minify --bundle",
+    "watch:tsc": "simplifyify src/js/main.ts --outfile dist/bundle.js --watch --bundle",
     "watch:scss": "onchange \"src/**/*.scss\" -- run-s build:scss",
-    "watch:assets": "onchange \"src/**/*.css\" \"src/**/*.html\" \"src/**/*.{png,jpg,gif}\" -- run-s build:assets",
+    "watch:assets": "onchange \"src/**/*.css\" \"src/**/*.html\" -- run-s build:scss",
     "watch": "run-p build serve watch:*"
   },
   "devDependencies": {
