@@ -2,8 +2,18 @@
 ## Features:
 
 - TypeScript
-- SCSS to CSS
+- SCSS
 - Dev server
-- Watch and browser-sync
+- Watch & browser-sync
 
+## Install
+`npm i`
+
+## Run
+`npm start`
+
+## Build for production
+`npm run build`
+
+## Notes
 Used this as base: https://github.com/adrianonrails/typescript-sass-starter
