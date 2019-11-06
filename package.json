@@ -13,7 +13,7 @@
     "build:tsc": "simplifyify src/**/*.ts --outfile dist/bundle.js --minify",
     "watch:tsc": "simplifyify src/**/*.ts --outfile dist/bundle.js --debug --watch",
     "watch:scss": "onchange \"src/**/*.scss\" -- run-s build:scss",
-    "watch:assets": "onchange \"src/**/*.ts\" \"src/**/*.css\" \"src/**/*.html\" \"src/**/*.{png,jpg,gif}\" -- run-s build:assets",
+    "watch:assets": "onchange \"src/**/*.css\" \"src/**/*.html\" \"src/**/*.{png,jpg,gif}\" -- run-s build:assets",
     "watch": "run-p build serve watch:*"
   },
   "devDependencies": {

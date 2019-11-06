@@ -1,7 +1,7 @@
 const App = () => {
 
   const init = () => {
-    console.log('App here!')
+    console.log('App here.')
   }
 
   return {
